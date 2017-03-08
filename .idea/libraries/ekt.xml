@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ekt">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../ekt.jar!/" />
+    </SOURCES>
+  </library>
+</component>
