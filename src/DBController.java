@@ -1,10 +1,6 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.util.Properties;
 
-/**
- * Created by taphan on 09.03.2017.
- */
 public class DBController {
 	public Connection con;
     private static final String url = "jdbc:mysql://localhost/treningsdagbok";
@@ -12,12 +8,18 @@ public class DBController {
     private static final String user = "admin";
 
     private static final String password = "database";
+    protected Connection con;
 
-    public void connect() {
+    protected void connect() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
+<<<<<<< HEAD
             this.con = DriverManager.getConnection(url, user, password);
             System.out.println("Success");
+=======
+            con = DriverManager.getConnection(url, user, password);
+            //System.out.println("Success");
+>>>>>>> bc125b78c2391bc35e080841a4cb4d0b43e255c0
 
         } catch (Exception e) {
             e.printStackTrace();
