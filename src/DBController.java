@@ -1,18 +1,18 @@
-package example; /**
- * Created by taphan on 08.03.2017.
- */
-
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.util.Properties;
 
-public class JDBCTest {
+/**
+ * Created by taphan on 09.03.2017.
+ */
+public class DBController {
     private static final String url = "jdbc:mysql://localhost/treningsdagbok";
 
     private static final String user = "admin";
 
     private static final String password = "database";
 
-    public static void main(String args[]) {
+    public void connect() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection(url, user, password);

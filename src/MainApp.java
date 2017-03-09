@@ -7,7 +7,9 @@ public class MainApp {
         // Spør brukeren om å velge et tall og kall deretter chooseActivity(input fra bruker)
         // while scanner.next.....
         MainApp main = new MainApp();
-        
+        DBController controller = new DBController();
+        controller.connect();
+
     }
 
     public void chooseActivity(Integer choice) {
