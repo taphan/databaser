@@ -6,6 +6,7 @@ import java.util.Properties;
  * Created by taphan on 09.03.2017.
  */
 public class DBController {
+	public Connection con;
     private static final String url = "jdbc:mysql://localhost/treningsdagbok";
 
     private static final String user = "admin";
@@ -15,7 +16,7 @@ public class DBController {
     public void connect() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection(url, user, password);
+            this.con = DriverManager.getConnection(url, user, password);
             System.out.println("Success");
 
         } catch (Exception e) {
