@@ -9,11 +9,11 @@ public class DBController {
     private static final String password = "database";
     protected Connection con;
 
-    public void connect() {
+    protected void connect() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection(url, user, password);
-            System.out.println("Success");
+            //System.out.println("Success");
 
         } catch (Exception e) {
             e.printStackTrace();
