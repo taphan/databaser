@@ -4,7 +4,6 @@
  */
 
 package example.ekt;
-
 import java.sql.*;
 
 /**
@@ -23,8 +22,8 @@ public class ResultatCtrl extends DBConn {
            int nr = 1;
            System.out.println("Resultatliste for klasse "+klasseNavn);
            while (rs.next()) {
-	    	System.out.println(" " + nr++ + " "+ rs.getString("navn") + " " + rs.getString("klubb") + " " + rs.getInt("lopstid"));
-	    }
+        	   System.out.println(" " + nr++ + " "+ rs.getString("navn") + " " + rs.getString("klubb") + " " + rs.getInt("lopstid"));
+           }
             
      	} catch (Exception e) {
             System.out.println("db error during select of loper = "+e);

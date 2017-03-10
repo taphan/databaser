@@ -10,11 +10,11 @@ public class MainApp extends DBController{
         connect();
     }
     private void chooseActivity() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Velg mellom alternativene ved å taste det tilhørende tallet og trykk Enter:");
-        System.out.println("1: Legg trening til database");
-        System.out.println("2: Viser statistikk de beste treningsøktene den siste måneden.");
-        System.out.println("3: Viser statistikk fra den siste måneden (antall økter, antall timer og annet)");
+    	Scanner sc = new Scanner(System.in);
+    	System.out.println("Velg mellom alternativene ved å taste det tilhørende tallet og trykk Enter:");
+    	System.out.println("1: Legg trening til database");
+    	System.out.println("2: Viser statistikk de beste treningsøktene den siste måneden.");
+    	System.out.println("3: Viser statistikk fra den siste måneden (antall økter, antall timer og annet)");
         while(sc.hasNext()) {
             int valg = sc.nextInt();
             if(valg == 1) {
@@ -26,6 +26,7 @@ public class MainApp extends DBController{
             } else {
                 System.out.println("Tast inn et tall mellom 1-3.");
             }
+
         }
         sc.close();
     }
@@ -60,30 +61,30 @@ public class MainApp extends DBController{
     	@SuppressWarnings("deprecation")
 		Date shortDate =new Date(longDate.getYear(),longDate.getMonth(),longDate.getDay());
     	
-    try{
-    	Statement stmt = con.createStatement();
-    	String query = ("SELECT Trening.Navn, Dato, Øvelse.Øvelsesnavn, "+
-    					"Form, Prestasjon, Resultat FROM Trening "+
-    					"INNER JOIN Øvelse "+
-    					"ON Trening.Øvelsesnavn = Øvelse.Øvelsesnavn "+
-    					"WHERE Dato >='"+ shortDate +"' "+
-    					"GROUP BY(Treningsnr) "+
-    					"ORDER BY Sum(Form + Prestasjon) DESC; ");
-    	
-    	ResultSet rs = stmt.executeQuery(query);
-    	int nr = 1;
-    	while(rs.next()){
-    		System.out.println("Nr"+ nr++ +": " + rs.getString("Navn") +" "+ rs.getDate("Dato") +" "+
-    				rs.getString("Øvelse.Øvelsesnavn") +" Form:"+ rs.getInt("Form")+" Prestasjon: "+
-    				rs.getInt("Prestasjon")+" Resultat: "+ rs.getString("Resultat"));
-    	}
-    	
-    }
-	    catch (Exception e) {
-			System.out.println("Error handeling dbRequest");
-		}
+	    try{
+	    	Statement stmt = con.createStatement();
+	    	String query = ("SELECT Trening.Navn, Dato, Øvelse.Øvelsesnavn, "+
+	    					"Form, Prestasjon, Resultat FROM Trening "+
+	    					"INNER JOIN Øvelse "+
+	    					"ON Trening.Øvelsesnavn = Øvelse.Øvelsesnavn "+
+	    					"WHERE Dato >='"+ shortDate +"' "+
+	    					"GROUP BY(Treningsnr) "+
+	    					"ORDER BY Sum(Form + Prestasjon) DESC; ");
+	    	
+	    	ResultSet rs = stmt.executeQuery(query);
+	    	int nr = 1;
+	    	while(rs.next()){
+	    	 	System.out.println("Doing");
+	    		System.out.println("Nr"+ nr++ +": " + rs.getString("Navn") +" "+ rs.getDate("Dato") +" "+
+	    				rs.getString("Øvelse.Øvelsesnavn") +" Form:"+ rs.getInt("Form")+" Prestasjon: "+
+	    				rs.getInt("Prestasjon")+" Resultat: "+ rs.getString("Resultat"));
+	    	}
+	    	
+	    }catch (Exception e) {
+	    	e.printStackTrace();
+				}
     }	
-    
+   
 
     /**
      * Uthenting av statistikk fra den siste måneden (antall økter, antall timer og annet)
@@ -97,5 +98,6 @@ public class MainApp extends DBController{
         // while scanner.next.....
         MainApp main = new MainApp();
         main.chooseActivity();
+
     }
 }
