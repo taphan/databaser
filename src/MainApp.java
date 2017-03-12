@@ -101,7 +101,7 @@ public class MainApp extends DBController{
                     "ORDER BY Trening.Dato;";
             ResultSet resultSet = statement.executeQuery(query);
             System.out.println("Dette er statistikk av treningene den siste måneden:");
-            if (resultSet.next()) {   // Hvis det er flere rader i tabellen
+            while (resultSet.next()) {   // Hvis det er flere rader i tabellen
                 // Format the print message.
                 dato =  rs.getString("Dato");  // getString(column) gets the result in column Dato
                 navn = rs.getString("Navn");
