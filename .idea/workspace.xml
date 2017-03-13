@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/MainApp.java" description="e.printStackTrace();" line="94" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="47ca5a54-5260-44a3-b77b-af66d5d53bc8" name="Default" comment="Lagt inn chooseActivity">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Innendørsaktivitet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Periode.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Resultat.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Utendørsaktivitet.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Kategori.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Datapunkt.java" afterPath="$PROJECT_DIR$/src/Datapunkt.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MainApp.java" afterPath="$PROJECT_DIR$/src/MainApp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ovelse.java" afterPath="$PROJECT_DIR$/src/Ovelse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Styrke.java" afterPath="$PROJECT_DIR$/src/Styrke.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Trening.java" afterPath="$PROJECT_DIR$/src/Trening.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utholdenhet.java" afterPath="$PROJECT_DIR$/src/Utholdenhet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/example/JDBCTest.java" afterPath="$PROJECT_DIR$/src/example/JDBCTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,12 +26,13 @@
       <file leaf-file-name="MainApp.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MainApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="55" column="29" lean-forward="false" selection-start-line="55" selection-start-column="29" selection-end-line="55" selection-end-column="29" />
+            <state relative-caret-position="428">
+              <caret line="80" column="31" lean-forward="false" selection-start-line="80" selection-start-column="31" selection-end-line="80" selection-end-column="31" />
               <folding>
                 <element signature="method#chooseActivity#0;class#MainApp#0" expanded="false" />
-                <element signature="method#viewRapport#0;class#MainApp#0" expanded="false" />
-                <element signature="method#viewStatistics#0;class#MainApp#0" expanded="false" />
+                <element signature="e#4154#4186#1" expanded="true" />
+                <marker date="1489442894924" expanded="false" signature="2731:2763" ph="/deprecation/" />
+                <marker date="1489442894924" expanded="false" signature="7349:8816" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -593,8 +588,9 @@
           <caret line="45" column="31" lean-forward="false" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
           <folding>
             <element signature="method#chooseActivity#0;class#MainApp#0" expanded="false" />
-            <element signature="method#viewRapport#0;class#MainApp#0" expanded="false" />
-            <element signature="method#viewStatistics#0;class#MainApp#0" expanded="false" />
+            <element signature="e#4154#4186#1" expanded="true" />
+            <marker date="1489442894924" expanded="false" signature="2731:2763" ph="/deprecation/" />
+            <marker date="1489442894924" expanded="false" signature="7349:8816" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -625,8 +621,9 @@
           <caret line="39" column="76" lean-forward="false" selection-start-line="39" selection-start-column="76" selection-end-line="39" selection-end-column="76" />
           <folding>
             <element signature="method#chooseActivity#0;class#MainApp#0" expanded="false" />
-            <element signature="method#viewRapport#0;class#MainApp#0" expanded="false" />
-            <element signature="method#viewStatistics#0;class#MainApp#0" expanded="false" />
+            <element signature="e#4154#4186#1" expanded="true" />
+            <marker date="1489442894924" expanded="false" signature="2731:2763" ph="/deprecation/" />
+            <marker date="1489442894924" expanded="false" signature="7349:8816" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -701,8 +698,9 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="method#chooseActivity#0;class#MainApp#0" expanded="false" />
-            <element signature="method#viewRapport#0;class#MainApp#0" expanded="false" />
-            <element signature="method#viewStatistics#0;class#MainApp#0" expanded="false" />
+            <element signature="e#4154#4186#1" expanded="true" />
+            <marker date="1489442894924" expanded="false" signature="2731:2763" ph="/deprecation/" />
+            <marker date="1489442894924" expanded="false" signature="7349:8816" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -956,12 +954,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MainApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="55" column="29" lean-forward="false" selection-start-line="55" selection-start-column="29" selection-end-line="55" selection-end-column="29" />
+        <state relative-caret-position="428">
+          <caret line="80" column="31" lean-forward="false" selection-start-line="80" selection-start-column="31" selection-end-line="80" selection-end-column="31" />
           <folding>
             <element signature="method#chooseActivity#0;class#MainApp#0" expanded="false" />
-            <element signature="method#viewRapport#0;class#MainApp#0" expanded="false" />
-            <element signature="method#viewStatistics#0;class#MainApp#0" expanded="false" />
+            <element signature="e#4154#4186#1" expanded="true" />
+            <marker date="1489442894924" expanded="false" signature="2731:2763" ph="/deprecation/" />
+            <marker date="1489442894924" expanded="false" signature="7349:8816" ph="{...}" />
           </folding>
         </state>
       </provider>
