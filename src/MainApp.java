@@ -63,6 +63,7 @@ public class MainApp extends DBController{
     	
 	    try{
 	    	Statement stmt = con.createStatement();
+	    	// ON Trening.Øvelsesnavn = Øvelse.Øvelsesnavn gir ikke mening, en trening kan ha flere øvelser, og Trening.Øvelsesnavn finnes derfor ikke!
 	    	String query = ("SELECT Trening.Navn, Dato, Øvelse.Øvelsesnavn, "+
 	    					"Form, Prestasjon, Resultat FROM Trening "+
 	    					"INNER JOIN Øvelse "+
@@ -95,8 +96,8 @@ public class MainApp extends DBController{
             String query = "SELECT Trening.Dato,Trening.Navn,Trening.Varighet, " +
                     "count(UtførØvelse.Øvelsesnavn) as Antall_øvelser " +
                     "FROM UtførØvelse JOIN Trening on UtførØvelse.Treningsnr = Trening.Treningsnr " +
-                    "WHERE Trening.Dato > (NOW() - INTERVAL 1 MONTH) " +
                     "JOIN Øvelse on UtførØvelse.Øvelsesnavn = Øvelse.Øvelsesnavn " +
+                    "WHERE Trening.Dato > (NOW() - INTERVAL 1 MONTH) " +
                     "GROUP BY UtførØvelse.Treningsnr " +
                     "ORDER BY Trening.Dato;";
             ResultSet rs = statement.executeQuery(query);
