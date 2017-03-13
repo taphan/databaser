@@ -72,6 +72,7 @@ public class MainApp extends DBController{
 	      * Rangere treningene etter beste trening, printer deretter alle øvelsene i treningsøken
 	      * Stykeøvelser printes først, deretter kondisjonøvelser. 
 	      */
+
 	    	
 	    	ResultSet rsBesteTrening = stmt.executeQuery(query1);
 	    	int nr = 1;
@@ -132,9 +133,32 @@ public class MainApp extends DBController{
     /**
      * Uthenting av statistikk fra den siste måneden (antall økter, antall timer og annet)
      */
-    private void viewStatistics() {
-
+    public void viewStatistics() {
+        try {
+            Statement statement = con.createStatement();
+            String query = "SELECT Trening.Dato,Trening.Navn,Trening.Varighet, " +
+                    "count(UtførØvelse.Øvelsesnavn) as Antall_øvelser " +
+                    "FROM UtførØvelse JOIN Trening on UtførØvelse.Treningsnr = Trening.Treningsnr " +
+                    "JOIN Øvelse on UtførØvelse.Øvelsesnavn = Øvelse.Øvelsesnavn " +
+                    "WHERE Trening.Dato > (NOW() - INTERVAL 1 MONTH) " +
+                    "GROUP BY UtførØvelse.Treningsnr " +
+                    "ORDER BY Trening.Dato;";
+            ResultSet rs = statement.executeQuery(query);
+            System.out.println("Dette er statistikk av treningene den siste måneden:");
+            while (rs.next()) {   // Hvis det er flere rader i tabellen
+                // Format the print message.
+                String dato = rs.getString("Dato");  // getString(column) gets the result in column Dato
+                String navn = rs.getString("Navn");
+                String varighet = rs.getString("Varighet");
+                String antall_ovelser = rs.getString("Antall Øvelser");
+                System.out.println("[ Dato: " + dato + ", treningsnavn: " + navn + ", varighet: "
+                        + varighet + ", antall øvelser: " + antall_ovelser + " ]");
+            }
+        } catch (Exception e) {
+            System.out.println("DB Error when trying to show last month's statistics: " + e);
+        }
     }
+
 
     public static void main(String[] args) {
         // Spør brukeren om å velge et tall og kall deretter chooseActivity(input fra bruker)
