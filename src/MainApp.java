@@ -39,25 +39,40 @@ public class MainApp extends DBController{
     /**
      * Add data to database using user input step by step
      */
+    // HVOR SKAL ØVELSESTYPE VÆRE???? BESTEM OSS FOR DET
     private void addToDatabase() {
-        // Legg inn periode -> trening -> øvelses og lagrer treningsnr og øvelsesnavn, slipper mye input for datapunkt og resultat!
+        // Legg inn periode -> trening -> øvelse og lagrer treningsnr og øvelsesnavn, slipper mye input for datapunkt og resultat!
         Scanner scanner = new Scanner(System.in);
         System.out.println("Velg først en periode (må være en uke) i form (PeriodeID, Fra (YYYY-MM-DD), Til (YYYY-MM-DD)");
 
+        System.out.println("Legg inn grunnleggende info til treningen i form (Treningsnr, navn, dato, varighet, form, prestasjon, treningsformål, tips");
 
+        System.out.println("Velg mellom utendørsaktivitet (1) eller innendørsaktivitet (2)");
+        Integer choice = scanner.nextInt();
+        if(choice == 1){
+            //Utendørsaktivitet akt = new Utendørsaktivitet();
+        } else if(choice==2) {
+            //Innendørsaktivitet akt = new Innendørsaktivitet();
+        }
+
+        // Kan legge inn flere resultater fra de ulike øvelsene: while løkke her!
         System.out.println("Velg mellom kategoriene for å legge inn en øvelse, tast inn tall 1 eller 2:");
         System.out.println("1: Kondisjon og styrke");
         System.out.println("2: Utholdenhet");
-        Integer choice = scanner.nextInt();
+        choice = scanner.nextInt();
         if(choice == 1) {
-            System.out.println("Legge til en styrkeøvelse i form (Treningsnr, øvelsesnavn, øvelsestype , belastning, antall repetisjon, antall sett");
+            System.out.println("Legge til en styrkeøvelse i form (Øvelsesnavn, øvelsestype , belastning, antall repetisjon, antall sett");
             Styrke styrke = new Styrke(1, "øvelsesnavn1", 50,8,4);
             styrke.save(con);
+            // Legg inn resultat til slutt (Kall Resultat())
         } else if(choice == 2) {
-            System.out.println("Legge til en styrkeøvelse i form (Treningsnr, øvelsesnavn, øvelsestype, lengde");
+            System.out.println("Legge til en utholdenhetsøvelse i form (Øvelsesnavn, øvelsestype, lengde");
             Utholdenhet utholdenhet = new Utholdenhet(1, "øvelsesnavn2",10);
             utholdenhet.save(con);
         }
+
+        System.out.println("Legg inn datapunkt for enkelte øvelse i form (PunktNr, tid, puls, lengdegrad, breddegrad, høyde over havet)");
+
         scanner.close();
     }
 
