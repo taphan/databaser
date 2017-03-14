@@ -1,6 +1,8 @@
 import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class MainApp extends DBController{
@@ -39,7 +41,6 @@ public class MainApp extends DBController{
     /**
      * Add data to database using user input step by step
      */
-    // HVOR SKAL ØVELSESTYPE VÆRE???? BESTEM OSS FOR DET
     private void addToDatabase() {
         // Legg inn periode -> trening -> øvelse og lagrer treningsnr og øvelsesnavn, slipper mye input for datapunkt og resultat!
         Scanner scanner = new Scanner(System.in);
@@ -62,12 +63,12 @@ public class MainApp extends DBController{
         choice = scanner.nextInt();
         if(choice == 1) {
             System.out.println("Legge til en styrkeøvelse i form (Øvelsesnavn, øvelsestype , belastning, antall repetisjon, antall sett");
-            Styrke styrke = new Styrke(1, "øvelsesnavn1", 50,8,4);
+            Styrke styrke = new Styrke(new ArrayList<>(Arrays.asList(1, "øvelsesnavn1", 50,8,4)));
             styrke.save(con);
             // Legg inn resultat til slutt (Kall Resultat())
         } else if(choice == 2) {
             System.out.println("Legge til en utholdenhetsøvelse i form (Øvelsesnavn, øvelsestype, lengde");
-            Utholdenhet utholdenhet = new Utholdenhet(1, "øvelsesnavn2",10);
+            Utholdenhet utholdenhet = new Utholdenhet(new ArrayList<>(Arrays.asList(1, "øvelsesnavn2",10)));
             utholdenhet.save(con);
         }
 

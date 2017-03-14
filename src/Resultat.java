@@ -8,12 +8,10 @@ public class Resultat extends ActiveDomainObject {
 
     protected Integer treningsnr;
     protected String ovelsesnavn;
-    protected Integer ovelsestype;
 
-    public Resultat(Integer nr, String navn, Integer ovelsestype) {
+    public Resultat(Integer nr, String navn) {
         treningsnr = nr;
         ovelsesnavn = navn;
-        this.ovelsestype = ovelsestype;
     }
 
     @Override
@@ -30,11 +28,10 @@ public class Resultat extends ActiveDomainObject {
     public void save(Connection connection) {
         try {
             // Legg nye data inn i databasen
-            String sql = "insert into treningsdagbok.resultat values (?,?,?)";
+            String sql = "insert into treningsdagbok.resultat values (?,?)";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1,treningsnr);
             preparedStatement.setString(2,ovelsesnavn);
-            preparedStatement.setInt(3,ovelsestype);
             preparedStatement.executeUpdate();
 
         } catch (Exception e) {

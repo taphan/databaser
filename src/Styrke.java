@@ -1,6 +1,8 @@
+import java.sql.Array;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 
 /**
  * Created by taphan on 09.03.2017.
@@ -11,11 +13,11 @@ public class Styrke extends Resultat {
     private Integer repetisjon;
     private Integer sett;
 
-    public Styrke(Integer nr, String navn, Integer belastning, Integer repetisjon, Integer sett) {
-        super(nr, navn);
-        this.belastning = belastning;
-        this.repetisjon = repetisjon;
-        this.sett = sett;
+    public Styrke(ArrayList styrke) {
+        super((Integer) styrke.get(0), (String) styrke.get(1));
+        this.belastning = (Integer)styrke.get(2);
+        this.repetisjon = (Integer) styrke.get(3);
+        this.sett = (Integer) styrke.get(4);
     }
 
     @Override
