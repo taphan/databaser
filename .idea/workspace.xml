@@ -4,13 +4,8 @@
     <bookmark url="file://$PROJECT_DIR$/src/MainApp.java" description="e.printStackTrace();" line="110" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47ca5a54-5260-44a3-b77b-af66d5d53bc8" name="Default" comment="Lagt inn chooseActivity">
+    <list default="true" id="47ca5a54-5260-44a3-b77b-af66d5d53bc8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MainApp.java" afterPath="$PROJECT_DIR$/src/MainApp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Periode.java" afterPath="$PROJECT_DIR$/src/Periode.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Resultat.java" afterPath="$PROJECT_DIR$/src/Resultat.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Styrke.java" afterPath="$PROJECT_DIR$/src/Styrke.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utholdenhet.java" afterPath="$PROJECT_DIR$/src/Utholdenhet.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,8 +54,8 @@
       <file leaf-file-name="Periode.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Periode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="16" column="43" lean-forward="false" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+            <state relative-caret-position="400">
+              <caret line="16" column="45" lean-forward="true" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#initialize#0;class#Periode#0" expanded="false" />
@@ -544,7 +539,14 @@
       <option name="project" value="LOCAL" />
       <updated>1489067382355</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Oppdatert ArrayList som parameter i noen konstruktør">
+      <created>1489476875819</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1489476875819</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -586,7 +588,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Lagt inn chooseActivity" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lagt inn chooseActivity" />
+    <MESSAGE value="Oppdatert ArrayList som parameter i noen konstruktør" />
+    <option name="LAST_COMMIT_MESSAGE" value="Oppdatert ArrayList som parameter i noen konstruktør" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1059,8 +1062,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Periode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="16" column="43" lean-forward="false" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+        <state relative-caret-position="400">
+          <caret line="16" column="45" lean-forward="true" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#initialize#0;class#Periode#0" expanded="false" />
