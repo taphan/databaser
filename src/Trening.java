@@ -20,7 +20,8 @@ public class Trening extends ActiveDomainObject{
     protected String tips;
     protected Integer periodeid;
 
-    protected Trening(Integer treningsnr, String navn, String dato, Integer varighet, Integer form, Integer prestasjon, String formaal, String tips, Integer periodeid) {
+    protected Trening(Integer periodeid,Integer treningsnr, String navn, String dato, Integer varighet, Integer form, Integer prestasjon, String formaal, String tips) {
+        this.periodeid = periodeid;
         this.treningsnr = treningsnr;
         this.navn = navn;
         this.dato = dato;
@@ -29,7 +30,6 @@ public class Trening extends ActiveDomainObject{
         this.prestasjon = prestasjon;
         this.formaal = formaal;
         this.tips = tips;
-        this.periodeid = periodeid;
     }
 
     @Override
@@ -48,15 +48,16 @@ public class Trening extends ActiveDomainObject{
             // Legg nye data inn i databasen
             String sql = "insert into treningsdagbok.trening values (?,?,?,?,?,?,?,?,?)";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setInt(1,treningsnr);
-            preparedStatement.setString(2,navn);
-            preparedStatement.setString(3,dato);
-            preparedStatement.setInt(4,varighet);
-            preparedStatement.setInt(5,form);
-            preparedStatement.setInt(6,prestasjon);
-            preparedStatement.setString(7,formaal);
-            preparedStatement.setString(8,tips);
-            preparedStatement.setInt(9,periodeid);
+
+            preparedStatement.setInt(1,periodeid);
+            preparedStatement.setInt(2,treningsnr);
+            preparedStatement.setString(3,navn);
+            preparedStatement.setString(4,dato);
+            preparedStatement.setInt(5,varighet);
+            preparedStatement.setInt(6,form);
+            preparedStatement.setInt(7,prestasjon);
+            preparedStatement.setString(8,formaal);
+            preparedStatement.setString(9,tips);
             preparedStatement.executeUpdate();
 
         } catch (Exception e) {

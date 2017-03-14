@@ -11,9 +11,10 @@ public class Utendørsaktivitet extends Trening {
     private String vaertype;
 
     public Utendørsaktivitet(ArrayList trening){
-        super((Integer) trening.get(0), (String) trening.get(1), (String) trening.get(2), (Integer)trening.get(3),
-                (Integer) trening.get(4), (Integer)trening.get(5), (String)trening.get(6), (String)trening.get(7), (Integer)trening.get(8));
-        this.temperatur = (Double) trening.get(9);
+        super(Integer.valueOf((String)trening.get(0)),Integer.valueOf((String)trening.get(1)), (String) trening.get(2),
+                (String) trening.get(3),Integer.valueOf((String)trening.get(4)),Integer.valueOf((String)trening.get(5)),
+                Integer.valueOf((String)trening.get(6)), (String)trening.get(7), (String)trening.get(8));
+        this.temperatur = Double.parseDouble((String) trening.get(9));
         this.vaertype = (String) trening.get(10);
     }
 

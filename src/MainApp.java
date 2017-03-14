@@ -1,3 +1,4 @@
+import java.sql.Array;
 import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -45,44 +46,64 @@ public class MainApp extends DBController{
     private void addToDatabase() {
         // Legg inn periode -> trening -> øvelse og lagrer treningsnr og øvelsesnavn, slipper mye input for datapunkt og resultat!
         Scanner scanner = new Scanner(System.in);
+
         System.out.println("Velg først en periode (må være en uke) i form (PeriodeID, Fra (YYYY-MM-DD), Til (YYYY-MM-DD)");
-        Periode periode = new Periode(new ArrayList<>(Arrays.asList(1,"2017-01-01", "2017-01-07")));
+        ArrayList periodeInput = new ArrayList<>(Arrays.asList(scanner.nextLine().split(",")));
+        Periode periode = new Periode(periodeInput);
         periode.save(con);
-        System.out.println("Legg inn grunnleggende info til treningen i form (Treningsnr, navn, dato, varighet, form, prestasjon, treningsformål, tips");
-        //List trening = new ArrayList(Arrays.asList(scanner.next().split(",")));
-        // Lagrer dette og send inn i uten/innendørsaktivitet konstruktør senere
 
         System.out.println("Velg mellom utendørsaktivitet (1) eller innendørsaktivitet (2)");
         Integer choice = scanner.nextInt();
+        ArrayList treningList;
         if(choice == 1){
-            Utendørsaktivitet akt = new Utendørsaktivitet(new ArrayList<>(Arrays.asList(1,"navn","2017-01-06",4,6,6,"formål","tips",1,2.5,"væretype")));
-            akt.save(con);
-        } else if(choice==2) {
-            Innendørsaktivitet akt = new Innendørsaktivitet(new ArrayList<>(Arrays.asList(1,"navn","2017-01-06",4,6,6,"formål","tips",1,"ventilasjon",5)));
-            akt.save(con);
+            System.out.println("Legg inn info om utendørsaktivitet i form (Treningsnr, navn, dato, varighet, form, " +
+                    "prestasjon, treningsformål, tips, temperatur, værtype)");
+            String nextLine = scanner.nextLine();
+            treningList = new ArrayList<>(Arrays.asList(scanner.nextLine().split(",")));
+            treningList.add(0,periodeInput.get(0)); // Legg inn periodeID inn som parameter
+            Utendørsaktivitet trening = new Utendørsaktivitet(treningList);
+            trening.save(con);
+        } else {
+            System.out.println("Legg inn info om innendørsaktivitet i form (Treningsnr, navn, dato, varighet, form, " +
+                    "prestasjon, treningsformål, tips, ventilasjon, antall tilskuere)");
+            String nextLine = scanner.nextLine();
+            treningList = new ArrayList<>(Arrays.asList(scanner.nextLine().split(",")));
+            treningList.add(0, periodeInput.get(0));
+            Innendørsaktivitet trening = new Innendørsaktivitet(treningList);
+            trening.save(con);
         }
 
-        // Kan legge inn flere resultater fra de ulike øvelsene: while løkke her!
-        //while(! scanner.next().equals("slutt")){
-        System.out.println("Legg grunnleggende info om en trening i form (Øvelsesnavn, beskrivelse");
-        System.out.println("Velg mellom kategoriene for å legge inn en øvelse, tast inn tall 1 eller 2:");
-        System.out.println("1: Kondisjon og styrke");
-        System.out.println("2: Utholdenhet");
-        choice = scanner.nextInt();
-        Ovelse ovelse = new Ovelse(new ArrayList<>(Arrays.asList("øvelsesnavn1","beskrivelse","lignende",choice)));
-        if(choice == 1) {
-            System.out.println("Legge til en styrkeøvelse i form (Belastning, antall repetisjon, antall sett");
-            Styrke styrke = new Styrke(new ArrayList<>(Arrays.asList(1, "øvelsesnavn1", 50,8,4)));
-            styrke.save(con);
-        } else if(choice == 2) {
-            System.out.println("Legge til en utholdenhetsøvelse i form (Øvelsesnavn, øvelsestype, lengde");
-            Utholdenhet utholdenhet = new Utholdenhet(new ArrayList<>(Arrays.asList(1, "øvelsesnavn2",10)));
-            utholdenhet.save(con);
-        }
+        System.out.println("Skriv 'start' for å begynne å legge inn øvelser, og 'slutt' for å slutte");
+        while(! scanner.next().equals("slutt")) {
+            String nextLine = scanner.nextLine();
+            System.out.println("Legg grunnleggende info om en trening i form (Øvelsesnavn, beskrivelse, lignende øvelse)");
+            ArrayList ovelseList = new ArrayList<>(Arrays.asList(scanner.nextLine().split(",")));
+            System.out.println("Velg mellom kategoriene for å legge inn en øvelse: Styrke (1) eller utholdenhet (2)");
+            choice = scanner.nextInt();
+            ovelseList.add(choice);
+            Ovelse ovelse = new Ovelse(ovelseList);
+            ovelse.save(con);
+            ArrayList resultatList = new ArrayList<>(Arrays.asList(treningList.get(0), ovelseList.get(0))); // treningsNr og øvelsesNavn
+            nextLine = scanner.nextLine();
+            if (choice == 1) {
+                System.out.println("Legge til resultat av styrkeøvelsen i form (Belastning, antall repetisjon, antall sett)");
+                resultatList.addAll(Arrays.asList(scanner.nextLine().split(",")));
+                Styrke styrke = new Styrke(resultatList);
+                styrke.save(con);
+            } else if (choice == 2) {
+                System.out.println("Legge til resultat av utholdenhetsøvelsen i form (Lengde)");
+                resultatList.addAll(Arrays.asList(scanner.nextLine().split(",")));
+                Utholdenhet utholdenhet = new Utholdenhet(resultatList);
+                utholdenhet.save(con);
+            }
 
-        System.out.println("Legg inn datapunkt for enkelte øvelse i form (PunktNr, tid, puls, lengdegrad, breddegrad, høyde over havet)");
-        Datapunkt punkt = new Datapunkt(new ArrayList<>(Arrays.asList(1,"øvelsesnavn1", 1,20,100,"lengde","bredde",150)));
-        punkt.save(con);
+            System.out.println("Legg inn datapunkt for enkelte øvelse i form (PunktNr, tid, puls, lengdegrad, breddegrad, høyde over havet)");
+            ArrayList punktList = new ArrayList<>(Arrays.asList(treningList.get(0), ovelseList.get(0)));
+            punktList.addAll(Arrays.asList(scanner.nextLine().split(",")));
+            Datapunkt punkt = new Datapunkt(punktList);
+            punkt.save(con);
+            System.out.println("Trykk Enter for å legge inn ny øvelse, og 'slutt' for å slutte");
+        }
         scanner.close();
     }
 
@@ -200,13 +221,13 @@ public class MainApp extends DBController{
     public void viewStatistics() {
         try {
             Statement statement = con.createStatement();
-            String query = "SELECT Trening.Dato,Trening.Navn,Trening.Varighet, " +
-                    "count(Resultat.Øvelsesnavn) as Antall_øvelser " +
-                    "FROM Resultat JOIN Trening on Resultat.Treningsnr = Trening.Treningsnr " +
-                    "JOIN Øvelse on Resultat.Øvelsesnavn = Øvelse.Øvelsesnavn " +
-                    "WHERE Trening.Dato > (NOW() - INTERVAL 1 MONTH) " +
-                    "GROUP BY Resultat.Treningsnr " +
-                    "ORDER BY Trening.Dato;";
+            String query = "SELECT treningsdagbok.Trening.Dato,treningsdagbok.Trening.Navn,treningsdagbok.Trening.Varighet, " +
+                    "count(treningsdagbok.Resultat.Øvelsesnavn) AS Antall_øvelser  " +
+                    "FROM treningsdagbok.Resultat JOIN treningsdagbok.Trening on treningsdagbok.Resultat.Treningsnr = treningsdagbok.Trening.Treningsnr " +
+                    "JOIN treningsdagbok.Øvelse on treningsdagbok.Resultat.Øvelsesnavn = treningsdagbok.Øvelse.Øvelsesnavn " +
+                    "WHERE treningsdagbok.Trening.Dato > (NOW() - INTERVAL 1 MONTH) " +
+                    "GROUP BY treningsdagbok.Resultat.Treningsnr " +
+                    "ORDER BY treningsdagbok.Trening.Dato;";
             ResultSet rs = statement.executeQuery(query);
             System.out.println("Dette er statistikk av treningene den siste måneden:");
             while (rs.next()) {   // Hvis det er flere rader i tabellen
@@ -214,7 +235,7 @@ public class MainApp extends DBController{
                 String dato = rs.getString("Dato");  // getString(column) gets the result in column Dato
                 String navn = rs.getString("Navn");
                 String varighet = rs.getString("Varighet");
-                String antall_ovelser = rs.getString("Antall Øvelser");
+                String antall_ovelser = rs.getString("Antall_øvelser");
                 System.out.println("[ Dato: " + dato + ", treningsnavn: " + navn + ", varighet: "
                         + varighet + ", antall øvelser: " + antall_ovelser + " ]");
             }

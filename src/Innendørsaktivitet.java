@@ -13,10 +13,11 @@ public class Innendørsaktivitet extends Trening {
     private Integer tilskuere;
 
     public Innendørsaktivitet(ArrayList trening) {
-        super((Integer) trening.get(0), (String) trening.get(1), (String) trening.get(2), (Integer)trening.get(3),
-                (Integer) trening.get(4), (Integer)trening.get(5), (String)trening.get(6), (String)trening.get(7), (Integer)trening.get(8));
+        super(Integer.valueOf((String)trening.get(0)),Integer.valueOf((String)trening.get(1)), (String) trening.get(2),
+                (String) trening.get(3),Integer.valueOf((String)trening.get(4)),Integer.valueOf((String)trening.get(5)),
+                Integer.valueOf((String)trening.get(6)), (String)trening.get(7), (String)trening.get(8));
         this.ventilasjon = (String) trening.get(9);
-        this.tilskuere = (Integer) trening.get(10);
+        this.tilskuere = Integer.valueOf((String)trening.get(10));
 
     }
 

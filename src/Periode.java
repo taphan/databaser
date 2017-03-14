@@ -12,7 +12,7 @@ public class Periode extends ActiveDomainObject {
     private String tilDato;
 
     public Periode(ArrayList param) {
-        this.periodeId = (Integer) param.get(0);
+        this.periodeId = Integer.valueOf( (String) param.get(0));
         this.fraDato = (String) param.get(1);
         this.tilDato = (String) param.get(2);
     }

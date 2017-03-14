@@ -18,14 +18,14 @@ public class Datapunkt extends ActiveDomainObject{
     private Integer høydeoverhavet;
 
     public Datapunkt(ArrayList param) {
-        this.treningsnr = (Integer) param.get(0);
+        this.treningsnr = Integer.valueOf((String)param.get(0));
         this.øvelsesnavn = (String) param.get(1);
-        this.punktnr = (Integer) param.get(2);
-        this.tid = (Integer) param.get(3);
-        this.puls = (Integer) param.get(4);
+        this.punktnr = Integer.valueOf((String)param.get(2));
+        this.tid = Integer.valueOf((String)param.get(3));
+        this.puls = Integer.valueOf((String)param.get(4));
         this.lengdegrad = (String) param.get(5);
         this.breddegrad = (String) param.get(6);
-        this.høydeoverhavet = (Integer) param.get(7);
+        this.høydeoverhavet = Integer.valueOf((String)param.get(7));
     }
 
     @Override
@@ -41,7 +41,7 @@ public class Datapunkt extends ActiveDomainObject{
     @Override
     public void save(Connection conn) {
         try {
-            String sql = "insert into treningsdagbok.øvelse values (?, ?, ?, ?, ?, ?, ?, ?)";
+            String sql = "insert into treningsdagbok.datapunkt values (?, ?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement preparedStatement = conn.prepareStatement(sql);
             // Parameters start with 1
             preparedStatement.setInt(1, treningsnr);
@@ -52,6 +52,7 @@ public class Datapunkt extends ActiveDomainObject{
             preparedStatement.setString(6, lengdegrad);
             preparedStatement.setString(7, breddegrad);
             preparedStatement.setInt(8, høydeoverhavet);
+            preparedStatement.executeUpdate();
 
         } catch (Exception e) {
             e.printStackTrace();

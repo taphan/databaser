@@ -13,11 +13,11 @@ public class Styrke extends Resultat {
     private Integer repetisjon;
     private Integer sett;
 
-    public Styrke(ArrayList styrke) {
-        super((Integer) styrke.get(0), (String) styrke.get(1));
-        this.belastning = (Integer)styrke.get(2);
-        this.repetisjon = (Integer) styrke.get(3);
-        this.sett = (Integer) styrke.get(4);
+    public Styrke(ArrayList param) {
+        super(Integer.valueOf( (String) param.get(0)), (String) param.get(1));
+        this.belastning = Integer.valueOf((String)param.get(2));
+        this.repetisjon = Integer.valueOf((String)param.get(3));
+        this.sett = Integer.valueOf((String)param.get(4));
     }
 
     @Override

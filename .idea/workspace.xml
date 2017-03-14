@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/MainApp.java" description="e.printStackTrace();" line="119" />
+    <bookmark url="file://$PROJECT_DIR$/src/MainApp.java" description="e.printStackTrace();" line="140" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47ca5a54-5260-44a3-b77b-af66d5d53bc8" name="Default" comment="Lagt inn chooseActivity">
@@ -9,11 +9,12 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Datapunkt.java" afterPath="$PROJECT_DIR$/src/Datapunkt.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Innendørsaktivitet.java" afterPath="$PROJECT_DIR$/src/Innendørsaktivitet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MainApp.java" afterPath="$PROJECT_DIR$/src/MainApp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ovelse.java" afterPath="$PROJECT_DIR$/src/Ovelse.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Periode.java" afterPath="$PROJECT_DIR$/src/Periode.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Resultat.java" afterPath="$PROJECT_DIR$/src/Resultat.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Styrke.java" afterPath="$PROJECT_DIR$/src/Styrke.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Trening.java" afterPath="$PROJECT_DIR$/src/Trening.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utendørsaktivitet.java" afterPath="$PROJECT_DIR$/src/Utendørsaktivitet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utholdenhet.java" afterPath="$PROJECT_DIR$/src/Utholdenhet.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,39 +30,16 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="Ovelse.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Ovelse.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="39" column="37" lean-forward="false" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
-              <folding>
-                <element signature="method#initialize#0;class#Ovelse#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MainApp.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MainApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="74" column="62" lean-forward="false" selection-start-line="74" selection-start-column="62" selection-end-line="74" selection-end-column="62" />
+            <state relative-caret-position="-167">
+              <caret line="66" column="52" lean-forward="true" selection-start-line="66" selection-start-column="52" selection-end-line="66" selection-end-column="52" />
               <folding>
                 <element signature="method#chooseActivity#0;class#MainApp#0" expanded="false" />
                 <element signature="method#viewRapport#0;class#MainApp#0" expanded="false" />
+                <element signature="e#6980#7012#1" expanded="true" />
                 <element signature="method#viewStatistics#0;class#MainApp#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Innendørsaktivitet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Innendørsaktivitet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="31" column="37" lean-forward="true" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -70,12 +48,23 @@
       <file leaf-file-name="Periode.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Periode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="17" column="5" lean-forward="false" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+            <state relative-caret-position="276">
+              <caret line="16" column="45" lean-forward="false" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="method#initialize#0;class#Periode#0" expanded="false" />
-                <element signature="e#584#585#0" expanded="false" />
-                <element signature="e#616#617#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Datapunkt.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Datapunkt.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding>
+                <element signature="method#initialize#0;class#Datapunkt#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -84,10 +73,22 @@
       <file leaf-file-name="Utholdenhet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Utholdenhet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="300">
+              <caret line="12" column="52" lean-forward="false" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Ovelse.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Ovelse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="363">
+              <caret line="17" column="49" lean-forward="false" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
+              <folding>
+                <element signature="method#initialize#0;class#Ovelse#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -96,36 +97,10 @@
       <file leaf-file-name="Styrke.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Styrke.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="82">
-              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="176">
+              <caret line="16" column="78" lean-forward="true" selection-start-line="16" selection-start-column="78" selection-end-line="16" selection-end-column="78" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Resultat.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Resultat.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="36" column="46" lean-forward="true" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#initialize#0;class#Resultat#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Trening.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Trening.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="25" column="25" lean-forward="true" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#initialize#0;class#Trening#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -160,16 +135,16 @@
         <option value="$PROJECT_DIR$/src/KondisjonOgStyrke.java" />
         <option value="$PROJECT_DIR$/src/Kategori.java" />
         <option value="$PROJECT_DIR$/src/DBController.java" />
-        <option value="$PROJECT_DIR$/src/Datapunkt.java" />
-        <option value="$PROJECT_DIR$/src/Trening.java" />
         <option value="$PROJECT_DIR$/src/Resultat.java" />
         <option value="$PROJECT_DIR$/src/Periode.java" />
-        <option value="$PROJECT_DIR$/src/Utholdenhet.java" />
+        <option value="$PROJECT_DIR$/src/Datapunkt.java" />
         <option value="$PROJECT_DIR$/src/Utendørsaktivitet.java" />
-        <option value="$PROJECT_DIR$/src/Styrke.java" />
+        <option value="$PROJECT_DIR$/src/Trening.java" />
         <option value="$PROJECT_DIR$/src/Innendørsaktivitet.java" />
-        <option value="$PROJECT_DIR$/src/MainApp.java" />
         <option value="$PROJECT_DIR$/src/Ovelse.java" />
+        <option value="$PROJECT_DIR$/src/Styrke.java" />
+        <option value="$PROJECT_DIR$/src/Utholdenhet.java" />
+        <option value="$PROJECT_DIR$/src/MainApp.java" />
       </list>
     </option>
   </component>
@@ -197,7 +172,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -244,8 +218,9 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -593,12 +568,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.50208336" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32850778" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14166667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15260416" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -660,6 +635,7 @@
           <folding>
             <element signature="method#chooseActivity#0;class#MainApp#0" expanded="false" />
             <element signature="method#viewRapport#0;class#MainApp#0" expanded="false" />
+            <element signature="e#6980#7012#1" expanded="true" />
             <element signature="method#viewStatistics#0;class#MainApp#0" expanded="false" />
           </folding>
         </state>
@@ -735,6 +711,7 @@
           <folding>
             <element signature="method#chooseActivity#0;class#MainApp#0" expanded="false" />
             <element signature="method#viewRapport#0;class#MainApp#0" expanded="false" />
+            <element signature="e#6980#7012#1" expanded="true" />
             <element signature="method#viewStatistics#0;class#MainApp#0" expanded="false" />
           </folding>
         </state>
@@ -765,6 +742,7 @@
           <folding>
             <element signature="method#chooseActivity#0;class#MainApp#0" expanded="false" />
             <element signature="method#viewRapport#0;class#MainApp#0" expanded="false" />
+            <element signature="e#6980#7012#1" expanded="true" />
             <element signature="method#viewStatistics#0;class#MainApp#0" expanded="false" />
           </folding>
         </state>
@@ -839,6 +817,7 @@
           <folding>
             <element signature="method#chooseActivity#0;class#MainApp#0" expanded="false" />
             <element signature="method#viewRapport#0;class#MainApp#0" expanded="false" />
+            <element signature="e#6980#7012#1" expanded="true" />
             <element signature="method#viewStatistics#0;class#MainApp#0" expanded="false" />
           </folding>
         </state>
@@ -981,16 +960,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Datapunkt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-          <folding>
-            <element signature="method#initialize#0;class#Datapunkt#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Kategori.java" />
     <entry file="file://$PROJECT_DIR$/src/example/avtalebok/setup.sql">
       <provider selected="true" editor-type-id="text-editor">
@@ -1001,20 +970,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Periode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="17" column="5" lean-forward="false" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        <state relative-caret-position="276">
+          <caret line="16" column="45" lean-forward="false" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#initialize#0;class#Periode#0" expanded="false" />
-            <element signature="e#584#585#0" expanded="false" />
-            <element signature="e#616#617#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utholdenhet.java">
+    <entry file="file://$PROJECT_DIR$/src/Trening.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="158">
+          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#initialize#0;class#Trening#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Innendørsaktivitet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="18" column="8" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1023,39 +1002,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Utendørsaktivitet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="24" column="22" lean-forward="true" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Innendørsaktivitet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="31" column="37" lean-forward="true" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Trening.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="25" column="25" lean-forward="true" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#initialize#0;class#Trening#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Styrke.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="475">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1064,8 +1012,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Resultat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="36" column="46" lean-forward="true" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
+        <state relative-caret-position="575">
+          <caret line="30" column="13" lean-forward="true" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#initialize#0;class#Resultat#0" expanded="false" />
@@ -1073,23 +1021,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Styrke.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="16" column="78" lean-forward="true" selection-start-line="16" selection-start-column="78" selection-end-line="16" selection-end-column="78" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Ovelse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="39" column="37" lean-forward="false" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
+        <state relative-caret-position="363">
+          <caret line="17" column="49" lean-forward="false" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
           <folding>
             <element signature="method#initialize#0;class#Ovelse#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utholdenhet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="52" lean-forward="false" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Datapunkt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="method#initialize#0;class#Datapunkt#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/MainApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="74" column="62" lean-forward="false" selection-start-line="74" selection-start-column="62" selection-end-line="74" selection-end-column="62" />
+        <state relative-caret-position="-167">
+          <caret line="66" column="52" lean-forward="true" selection-start-line="66" selection-start-column="52" selection-end-line="66" selection-end-column="52" />
           <folding>
             <element signature="method#chooseActivity#0;class#MainApp#0" expanded="false" />
             <element signature="method#viewRapport#0;class#MainApp#0" expanded="false" />
+            <element signature="e#6980#7012#1" expanded="true" />
             <element signature="method#viewStatistics#0;class#MainApp#0" expanded="false" />
           </folding>
         </state>

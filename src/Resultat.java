@@ -11,7 +11,7 @@ public class Resultat extends ActiveDomainObject {
     protected Integer treningsnr;
     protected String ovelsesnavn;
 
-    public Resultat(Integer nr, String navn) {
+    protected Resultat(Integer nr, String navn) {
         treningsnr = nr;
         ovelsesnavn = navn;
     }

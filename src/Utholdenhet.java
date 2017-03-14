@@ -10,8 +10,8 @@ public class Utholdenhet extends Resultat {
     private Integer lengde;
 
     public Utholdenhet(ArrayList param) {
-        super((Integer) param.get(0),(String) param.get(1));
-        this.lengde = (Integer) param.get(2);
+        super(Integer.valueOf((String )param.get(0)),(String) param.get(1));
+        this.lengde = Integer.valueOf((String)param.get(2));
     }
 
 
