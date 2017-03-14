@@ -2,6 +2,7 @@ import javafx.scene.control.ComboBox;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.util.ArrayList;
 
 /**
  * Created by taphan on 13.03.2017.
@@ -11,10 +12,12 @@ public class Innendørsaktivitet extends Trening {
     private String ventilasjon;
     private Integer tilskuere;
 
-    public Innendørsaktivitet(Integer treningsnr, String navn, String dato, Integer varighet, Integer form, Integer prestasjon, String formaal, String tips, Integer periodeid, String ventilasjon, Integer tilskuere) {
-        super(treningsnr, navn, dato, varighet, form, prestasjon, formaal, tips, periodeid);
-        this.ventilasjon = ventilasjon;
-        this.tilskuere = tilskuere;
+    public Innendørsaktivitet(ArrayList trening) {
+        super((Integer) trening.get(0), (String) trening.get(1), (String) trening.get(2), (Integer)trening.get(3),
+                (Integer) trening.get(4), (Integer)trening.get(5), (String)trening.get(6), (String)trening.get(7), (Integer)trening.get(8));
+        this.ventilasjon = (String) trening.get(9);
+        this.tilskuere = (Integer) trening.get(10);
+
     }
 
     @Override

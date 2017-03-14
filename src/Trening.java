@@ -5,7 +5,9 @@ import java.sql.PreparedStatement;
 
 /**
  * Created by taphan on 09.03.2017.
+ * Denne klassen er avhengig av Innendørs- og Utendørsaktivitet og blir aldri instansiert in MainApp.
  */
+
 public class Trening extends ActiveDomainObject{
 
     protected Integer treningsnr;
