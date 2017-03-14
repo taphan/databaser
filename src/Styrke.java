@@ -34,6 +34,7 @@ public class Styrke extends Resultat {
             preparedStatement.setInt(5, sett);
             preparedStatement.executeUpdate();
 
+
         } catch (Exception e) {
             e.printStackTrace();
         }

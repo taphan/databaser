@@ -1,6 +1,7 @@
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 /**
  * Created by taphan on 09.03.2017.
@@ -16,15 +17,15 @@ public class Datapunkt extends ActiveDomainObject{
     private String breddegrad;
     private Integer høydeoverhavet;
 
-    public Datapunkt(Integer treningsnr,String øvelsesnavn, Integer punktnr,Integer tid, Integer puls, String lengdegrad, String breddegrad, Integer høydeoverhavet) {
-        this.treningsnr = treningsnr;
-        this.øvelsesnavn = øvelsesnavn;
-        this.punktnr = punktnr;
-        this.tid = tid;
-        this.puls = puls;
-        this.lengdegrad = lengdegrad;
-        this.breddegrad = breddegrad;
-        this.høydeoverhavet = høydeoverhavet;
+    public Datapunkt(ArrayList param) {
+        this.treningsnr = (Integer) param.get(0);
+        this.øvelsesnavn = (String) param.get(1);
+        this.punktnr = (Integer) param.get(2);
+        this.tid = (Integer) param.get(3);
+        this.puls = (Integer) param.get(4);
+        this.lengdegrad = (String) param.get(5);
+        this.breddegrad = (String) param.get(6);
+        this.høydeoverhavet = (Integer) param.get(7);
     }
 
     @Override

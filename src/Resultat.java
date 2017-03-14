@@ -3,7 +3,9 @@ import java.sql.PreparedStatement;
 
 /**
  * Created by taphan on 13.03.2017.
+ * Denne klassen er avhengig av Styrke og Utholdenhet og blir aldri instansiert in MainApp.
  */
+
 public class Resultat extends ActiveDomainObject {
 
     protected Integer treningsnr;
