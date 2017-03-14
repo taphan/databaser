@@ -1,5 +1,6 @@
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.util.ArrayList;
 
 /**
  * Created by taphan on 13.03.2017.
@@ -10,10 +11,10 @@ public class Periode extends ActiveDomainObject {
     private String fraDato;
     private String tilDato;
 
-    public Periode(Integer periodeId, String fraDato, String tilDato) {
-        this.periodeId = periodeId;
-        this.fraDato = fraDato;
-        this.tilDato = tilDato;
+    public Periode(ArrayList param) {
+        this.periodeId = (Integer) param.get(0);
+        this.fraDato = (String) param.get(1);
+        this.tilDato = (String) param.get(2);
     }
 
     @Override

@@ -1,16 +1,17 @@
 import javax.xml.transform.Result;
 import java.sql.*;
+import java.util.ArrayList;
 
 /**
  * Created by taphan on 09.03.2017.
  */
 public class Utholdenhet extends Resultat {
 
-    Integer lengde;
+    private Integer lengde;
 
-    public Utholdenhet(Integer nr, String navn,  Integer lengde) {
-        super(nr, navn);
-        this.lengde = lengde;
+    public Utholdenhet(ArrayList param) {
+        super((Integer) param.get(0),(String) param.get(1));
+        this.lengde = (Integer) param.get(2);
     }
 
 
