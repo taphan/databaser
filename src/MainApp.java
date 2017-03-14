@@ -3,6 +3,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class MainApp extends DBController{
@@ -45,27 +46,30 @@ public class MainApp extends DBController{
         // Legg inn periode -> trening -> øvelse og lagrer treningsnr og øvelsesnavn, slipper mye input for datapunkt og resultat!
         Scanner scanner = new Scanner(System.in);
         System.out.println("Velg først en periode (må være en uke) i form (PeriodeID, Fra (YYYY-MM-DD), Til (YYYY-MM-DD)");
+        Periode periode = new Periode(new ArrayList<>(Arrays.asList(1,"2017-01-01", "2017-01-07")));
 
         System.out.println("Legg inn grunnleggende info til treningen i form (Treningsnr, navn, dato, varighet, form, prestasjon, treningsformål, tips");
+        //List trening = new ArrayList(Arrays.asList(scanner.next().split(",")));
+        // Lagrer dette og send inn i uten/innendørsaktivitet konstruktør senere
 
         System.out.println("Velg mellom utendørsaktivitet (1) eller innendørsaktivitet (2)");
         Integer choice = scanner.nextInt();
         if(choice == 1){
-            //Utendørsaktivitet akt = new Utendørsaktivitet();
+            //Utendørsaktivitet akt = new Utendørsaktivitet(new ArrayList<>(Arrays.asList(1,"navn","2017-01-06",4,6,6,"formål","tips",1,2.5,"væretype")));
         } else if(choice==2) {
-            //Innendørsaktivitet akt = new Innendørsaktivitet();
+            //Innendørsaktivitet akt = new Innendørsaktivitet(new ArrayList<>(Arrays.asList(1,"navn","2017-01-06",4,6,6,"formål","tips",1,"ventilasjon",5)));
         }
 
         // Kan legge inn flere resultater fra de ulike øvelsene: while løkke her!
+        //while(! scanner.next().equals("slutt")){
         System.out.println("Velg mellom kategoriene for å legge inn en øvelse, tast inn tall 1 eller 2:");
         System.out.println("1: Kondisjon og styrke");
         System.out.println("2: Utholdenhet");
         choice = scanner.nextInt();
         if(choice == 1) {
-            System.out.println("Legge til en styrkeøvelse i form (Øvelsesnavn, øvelsestype , belastning, antall repetisjon, antall sett");
+            System.out.println("Legge til en styrkeøvelse i form (Belastning, antall repetisjon, antall sett");
             Styrke styrke = new Styrke(new ArrayList<>(Arrays.asList(1, "øvelsesnavn1", 50,8,4)));
             styrke.save(con);
-            // Legg inn resultat til slutt (Kall Resultat())
         } else if(choice == 2) {
             System.out.println("Legge til en utholdenhetsøvelse i form (Øvelsesnavn, øvelsestype, lengde");
             Utholdenhet utholdenhet = new Utholdenhet(new ArrayList<>(Arrays.asList(1, "øvelsesnavn2",10)));
