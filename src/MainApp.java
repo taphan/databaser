@@ -39,7 +39,6 @@ public class MainApp extends DBController{
         sc.close();
     }
 
-
     /**
      * Add data to database using user input step by step
      */
@@ -50,6 +49,7 @@ public class MainApp extends DBController{
         System.out.println("Velg først en periode (må være en uke) i form (PeriodeID, Fra (YYYY-MM-DD), Til (YYYY-MM-DD)");
         ArrayList periodeInput = new ArrayList<>(Arrays.asList(scanner.nextLine().split(",")));
         Periode periode = new Periode(periodeInput);
+        //Periode periode = new Periode(new ArrayList<>(Arrays.asList("1","2017-01-01","2017-07-01")));
         periode.save(con);
 
         System.out.println("Velg mellom utendørsaktivitet (1) eller innendørsaktivitet (2)");
@@ -62,6 +62,9 @@ public class MainApp extends DBController{
             treningList = new ArrayList<>(Arrays.asList(scanner.nextLine().split(",")));
             treningList.add(0,periodeInput.get(0)); // Legg inn periodeID inn som parameter
             Utendørsaktivitet trening = new Utendørsaktivitet(treningList);
+
+            //Utendørsaktivitet trening = new Utendørsaktivitet(new ArrayList<>(Arrays.asList("1","1","navn","2017-01-07","4","4",
+            //        "4","formål","tips","25.0","vær")));
             trening.save(con);
         } else {
             System.out.println("Legg inn info om innendørsaktivitet i form (Treningsnr, navn, dato, varighet, form, " +
@@ -70,6 +73,9 @@ public class MainApp extends DBController{
             treningList = new ArrayList<>(Arrays.asList(scanner.nextLine().split(",")));
             treningList.add(0, periodeInput.get(0));
             Innendørsaktivitet trening = new Innendørsaktivitet(treningList);
+
+            //Innendørsaktivitet trening = new Innendørsaktivitet(new ArrayList<>(Arrays.asList("1","1","navn","2017-01-07","4","4",
+            //       "4","formål","tips","ventilasjon","5")));
             trening.save(con);
         }
 
@@ -89,20 +95,24 @@ public class MainApp extends DBController{
                 System.out.println("Legge til resultat av styrkeøvelsen i form (Belastning, antall repetisjon, antall sett)");
                 resultatList.addAll(Arrays.asList(scanner.nextLine().split(",")));
                 Styrke styrke = new Styrke(resultatList);
+                //Styrke styrke = new Styrke(new ArrayList<>(Arrays.asList("1","navn","40","8","4")));
                 styrke.save(con);
             } else if (choice == 2) {
                 System.out.println("Legge til resultat av utholdenhetsøvelsen i form (Lengde)");
                 resultatList.addAll(Arrays.asList(scanner.nextLine().split(",")));
                 Utholdenhet utholdenhet = new Utholdenhet(resultatList);
+                //Utholdenhet utholdenhet = new Utholdenhet(new ArrayList<>(Arrays.asList("1","navn",10)));
                 utholdenhet.save(con);
             }
 
             System.out.println("Legg inn datapunkt for enkelte øvelse i form (PunktNr, tid, puls, lengdegrad, breddegrad, høyde over havet)");
             ArrayList punktList = new ArrayList<>(Arrays.asList(treningList.get(0), ovelseList.get(0)));
+            //ArrayList punktList = new ArrayList<>(Arrays.asList("1","navn"));
             punktList.addAll(Arrays.asList(scanner.nextLine().split(",")));
+            //punktList.addAll(Arrays.asList("1","60","100","lengde","bredde","200"));
             Datapunkt punkt = new Datapunkt(punktList);
             punkt.save(con);
-            System.out.println("Trykk Enter for å legge inn ny øvelse, og 'slutt' for å slutte");
+            System.out.println("Skriv 'start' for å legge inn ny øvelse, og 'slutt' for å slutte");
         }
         scanner.close();
     }
